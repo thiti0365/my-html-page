@@ -9,12 +9,24 @@
       .responsive-image {
         width: 100%;
         height: auto;
-        max-width: 600px;  /* Limit the maximum width of the image */
         display: block;
         margin: 0 auto;  /* Center the image */
       }
 
-      /* Add some padding to the body to give some spacing */
+      /* Styling for large screens */
+      @media only screen and (min-width: 1200px) {
+        .responsive-image {
+          max-width: 80%; /* Set a larger max-width for desktop */
+        }
+      }
+
+      /* Styling for smaller screens */
+      @media only screen and (max-width: 1199px) {
+        .responsive-image {
+          max-width: 100%;  /* Set image to full width on smaller screens */
+        }
+      }
+
       body {
         padding: 20px;
         text-align: center;  /* Center the content */
@@ -22,10 +34,8 @@
     </style>
   </head>
   <body>
-<!--     <h1>Check Facebook Browser</h1> -->
-  
     <div id="link-container">
-    <!-- The link will be displayed here based on detection -->
+      <!-- The link will be displayed here based on detection -->
     </div>
     
     <script>
