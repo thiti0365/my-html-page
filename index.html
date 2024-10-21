@@ -5,26 +5,12 @@
     <meta charset="UTF-8">
     <link rel="icon" href="https://quota.jc.tu.ac.th/images/jc_logo.png" type="image/png">
     <style>
-      /* Set the image to be responsive */
-      .responsive-image {
-        width: 100%;
-        height: auto;
+      /* Set the image to its original size */
+      .original-size-image {
+        width: auto;  /* Let the image keep its original width */
+        height: auto;  /* Let the image keep its original height */
         display: block;
         margin: 0 auto;  /* Center the image */
-      }
-
-      /* Styling for large screens */
-      @media only screen and (min-width: 1200px) {
-        .responsive-image {
-          max-width: 80%; /* Set a larger max-width for desktop */
-        }
-      }
-
-      /* Styling for smaller screens */
-      @media only screen and (max-width: 1199px) {
-        .responsive-image {
-          max-width: 100%;  /* Set image to full width on smaller screens */
-        }
       }
 
       body {
@@ -64,9 +50,9 @@
       }
 
       // Set the image source to the Google Drive link (make sure the file is shared publicly)
-      image.src = 'https://i.postimg.cc/Y9Kh2pfX/jc-reunion2024-click.gif';
+      image.src = 'https://i.postimg.cc/rsk5KGct/Click.gif';
       image.alt = 'Click to open';
-      image.className = 'responsive-image';  // Add the responsive class to the image
+      image.className = 'original-size-image';  // Add the original size class to the image
 
       link.target = '_blank';  // Open the link in a new tab/window
       link.appendChild(image);  // Add the image to the link
