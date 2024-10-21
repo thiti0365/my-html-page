@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <title>My HTML Page</title>
-      <meta charset="UTF-8">
+    <title>My HTML Page</title>
+    <meta charset="UTF-8">
     <link rel="icon" href="https://quota.jc.tu.ac.th/images/jc_logo.png" type="image/png">
-      </head>
+    <style>
+      /* Set the image to be responsive */
+      .responsive-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;  /* Ensure it doesn't exceed the container width */
+      }
+    </style>
+  </head>
   <body>
-    <h1>Check facebook browser </h1>
+    <h1>Check Facebook Browser</h1>
   
     <div id="link-container">
     <!-- The link will be displayed here based on detection -->
@@ -27,23 +35,28 @@
     function generateLink() {
       var linkContainer = document.getElementById('link-container');
       var link = document.createElement('a');
+      var image = document.createElement('img');
 
       if (isFacebookApp() && isIOS()) {
         // If opened from Facebook's in-app browser on iOS
         link.href = 'x-safari-https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
-        link.innerText = 'Open in Safari';
       } else {
         // For all other browsers/platforms
         link.href = 'https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
-        link.innerText = 'Open Browser';
       }
 
+      // Set the image source to the Google Drive link (make sure the file is shared publicly)
+      image.src = 'https://drive.google.com/uc?id=1V0SxGsr6l-7xdkcE4m8rWd2SZdWuf7YF';
+      image.alt = 'Click to open';
+      image.className = 'responsive-image';  // Add the responsive class to the image
+
       link.target = '_blank';  // Open the link in a new tab/window
+      link.appendChild(image);  // Add the image to the link
       linkContainer.appendChild(link);  // Add the link to the container
     }
 
     // Run the function to generate the correct link
     generateLink();
-  </script>
+    </script>
   </body>
 </html>
