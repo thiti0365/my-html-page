@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>My HTML Page</title>
+      <meta charset="UTF-8">
+      </head>
+  <body>
+    <h1>Check facebook browser </h1>
+  
+    <div id="link-container">
+    <!-- The link will be displayed here based on detection -->
+    </div>
+    
+    <script>
+    // Function to detect if the user is on an iOS device
+    function isIOS() {
+      return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // Function to detect if the user is using Facebook's in-app browser
+    function isFacebookApp() {
+      return /FBAN|FBAV/i.test(navigator.userAgent);
+    }
+
+    // Function to generate the appropriate link
+    function generateLink() {
+      var linkContainer = document.getElementById('link-container');
+      var link = document.createElement('a');
+
+      if (isFacebookApp() && isIOS()) {
+        // If opened from Facebook's in-app browser on iOS
+        link.href = 'x-safari-https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
+        link.innerText = 'Open in Safari';
+      } else {
+        // For all other browsers/platforms
+        link.href = 'https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
+        link.innerText = 'Open Browser';
+      }
+
+      link.target = '_blank';  // Open the link in a new tab/window
+      linkContainer.appendChild(link);  // Add the link to the container
+    }
+
+    // Run the function to generate the correct link
+    generateLink();
+  </script>
+  </body>
+</html>
