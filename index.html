@@ -9,7 +9,15 @@
       .responsive-image {
         width: 100%;
         height: auto;
-        max-width: 100%;  /* Ensure it doesn't exceed the container width */
+        max-width: 600px;  /* Limit the maximum width of the image */
+        display: block;
+        margin: 0 auto;  /* Center the image */
+      }
+
+      /* Add some padding to the body to give some spacing */
+      body {
+        padding: 20px;
+        text-align: center;  /* Center the content */
       }
     </style>
   </head>
@@ -46,7 +54,6 @@
       }
 
       // Set the image source to the Google Drive link (make sure the file is shared publicly)
-      // image.src = 'https://drive.google.com/thumbnail?id=1V0SxGsr6l-7xdkcE4m8rWd2SZdWuf7YF';
       image.src = 'https://i.postimg.cc/rsk5KGct/Click.gif';
       image.alt = 'Click to open';
       image.className = 'responsive-image';  // Add the responsive class to the image
