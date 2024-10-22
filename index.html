@@ -8,8 +8,8 @@
       /* Container to center the content (flexbox) */
       .center-container {
         display: flex;
-        justify-content: center;  /* Horizontally center */
-        align-items: center;      /* Vertically center */
+        justify-content: center;  /* Center horizontally */
+        align-items: flex-start;  /* Align items to the top */
         height: 100vh;            /* Full height of viewport */
         text-align: center;       /* Center text content */
       }
@@ -21,6 +21,7 @@
         width: auto;
         height: auto;
         display: block;
+        margin: 0; /* Remove any default margin */
       }
 
       /* Media query for mobile devices */
