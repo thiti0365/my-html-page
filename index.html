@@ -26,20 +26,20 @@
       /* Media query for mobile devices */
       @media (max-width: 768px) {
         .responsive-image {
-          width: 200vw;            /* Increase width to 120% of viewport */
+          width: 120vw;            /* Increase width to 120% of viewport */
           height: 100vh;           /* Keep the height to 100% of viewport */
           object-fit: cover;       /* Crop the image to fit the container */
-          object-position: center; /* Focus on the center of the image */
+          object-position: top center; /* Focus on the top center of the image */
         }
       }
 
       /* For even smaller devices or more cropping */
       @media (max-width: 480px) {
         .responsive-image {
-          width: 200vw;            /* Increase width to 150% of viewport to crop more */
+          width: 150vw;            /* Increase width to 150% of viewport to crop more */
           height: 100vh;           /* Keep the height to 100% of viewport */
           object-fit: cover;       /* Crop the image more */
-          object-position: center; /* Focus on the center */
+          object-position: top center; /* Focus on the top center */
         }
       }
     </style>
@@ -68,10 +68,10 @@
 
       if (isFacebookApp() && isIOS()) {
         // If opened from Facebook's in-app browser on iOS
-        link.href = 'x-safari-https://script.google.com/macros/s/AKfycbyXg_d2oP3OUE4VIaUIuy1ybXL-6YLSm9ig4AQzfOxZYi6hai--9-HNzDtJkCbaEcCl/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
+        link.href = 'x-safari-https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
       } else {
         // For all other browsers/platforms
-        link.href = 'https://script.google.com/macros/s/AKfycbyXg_d2oP3OUE4VIaUIuy1ybXL-6YLSm9ig4AQzfOxZYi6hai--9-HNzDtJkCbaEcCl/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
+        link.href = 'https://script.google.com/a/macros/tu.ac.th/s/AKfycbxaoKtKlwlUMsAxGgOPIUqQ2usSSLowjHdCFIZgqhwOyWHhMcdgRNGbHVCXAjvQvn89_Q/exec?fbclid=IwY2xjawGBW81leHRuA2FlbQIxMAABHdECaq9rixZtZgvfwaV2L9iShTggX89gCjLHIh8FitvcQ5mbhBO4I3QqMQ_aem_qaiv8lAS75Wqi8JDAy1KaA';
       }
 
       // Set the image source to the GIF in the same GitHub repository
