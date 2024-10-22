@@ -14,13 +14,23 @@
         text-align: center;       /* Center text content */
       }
 
-      /* Responsive image that will fit inside the viewport */
+      /* Responsive image for larger screens */
       .responsive-image {
         max-width: 100vw;  /* Max width to fill viewport width */
         max-height: 100vh; /* Max height to fill viewport height */
-        width: auto;       /* Maintain aspect ratio */
-        height: auto;      /* Maintain aspect ratio */
-        display: block;    /* Make sure image is block element */
+        width: auto;
+        height: auto;
+        display: block;
+      }
+
+      /* Media query for mobile devices */
+      @media (max-width: 768px) {
+        .responsive-image {
+          width: 100vw;            /* Fill the full width of the screen */
+          height: 100vh;           /* Fill the full height of the screen */
+          object-fit: cover;       /* Crop the image to fit the container */
+          object-position: center; /* Focus on the center of the image */
+        }
       }
     </style>
   </head>
