@@ -14,9 +14,13 @@
         text-align: center;       /* Center text content */
       }
 
-      .original-size-image {
-        max-width: 100%;  /* Ensure image doesn't overflow */
-        height: auto;     /* Maintain aspect ratio */
+      /* Responsive image that will fit inside the viewport */
+      .responsive-image {
+        max-width: 100vw;  /* Max width to fill viewport width */
+        max-height: 100vh; /* Max height to fill viewport height */
+        width: auto;       /* Maintain aspect ratio */
+        height: auto;      /* Maintain aspect ratio */
+        display: block;    /* Make sure image is block element */
       }
     </style>
   </head>
@@ -53,7 +57,7 @@
       // Set the image source to the GIF in the same GitHub repository
       image.src = './jc-reunion2024-click.gif';  // Use relative path to the GIF file
       image.alt = 'Click to open';
-      image.className = 'original-size-image';  // Add the original size class to the image
+      image.className = 'responsive-image';  // Add the responsive class to the image
 
       link.target = '_blank';  // Open the link in a new tab/window
       link.appendChild(image);  // Add the image to the link
@@ -61,7 +65,7 @@
     }
 
     // Run the function to generate the correct link
-    generateLink(); 
+    generateLink();
     </script>
   </body>
 </html>
