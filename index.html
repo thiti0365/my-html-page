@@ -26,10 +26,20 @@
       /* Media query for mobile devices */
       @media (max-width: 768px) {
         .responsive-image {
-          width: 100vw;            /* Fill the full width of the screen */
-          height: 100vh;           /* Fill the full height of the screen */
+          width: 120vw;            /* Increase width to 120% of viewport */
+          height: 100vh;           /* Keep the height to 100% of viewport */
           object-fit: cover;       /* Crop the image to fit the container */
           object-position: center; /* Focus on the center of the image */
+        }
+      }
+
+      /* For even smaller devices or more cropping */
+      @media (max-width: 480px) {
+        .responsive-image {
+          width: 150vw;            /* Increase width to 150% of viewport to crop more */
+          height: 100vh;           /* Keep the height to 100% of viewport */
+          object-fit: cover;       /* Crop the image more */
+          object-position: center; /* Focus on the center */
         }
       }
     </style>
